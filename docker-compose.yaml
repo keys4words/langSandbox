@@ -3,3 +3,10 @@ version: '3.8'
 services:
   java:
     build: ./java
+
+  rust:
+    image: rust:1.65.0-slim-buster
+    volumes:
+      - ./rust/:/projects
+    environment:
+      - USER=keys4
